@@ -1,0 +1,133 @@
+/* Shared finishing layer. Layout and responsive structure remain in globals.css. */
+:root {
+  --surface-mist: #f8fbff;
+  --surface-blue: #f2f7ff;
+  --surface-ice: #eef4ff;
+  --card-radius: 20px;
+  --card-border: rgba(63, 113, 191, .13);
+  --card-shadow: 0 8px 26px rgba(19, 57, 115, .045), 0 1px 3px rgba(19, 57, 115, .025);
+  --card-shadow-hover: 0 18px 38px rgba(19, 57, 115, .10);
+}
+
+/* Quiet changes in tone separate chapters without interrupting the narrative. */
+.philosophy-strip { background: var(--surface-blue); border-color: var(--card-border); }
+.legacy { background: radial-gradient(ellipse at 8% 65%, #e7f0ff80, transparent 55%), var(--surface-mist); }
+.community { background: radial-gradient(ellipse at 88% 45%, #dcebff99, transparent 56%), var(--surface-blue); }
+.events, .resources { background: #fff; }
+.values { background: var(--surface-mist); padding-bottom: 100px; }
+.gallery { background: radial-gradient(ellipse at 15% 85%, #dcebff77, transparent 60%), var(--surface-blue); padding-top: 100px; }
+.resources { background-image: radial-gradient(ellipse at 90% 100%, #f2f7ff, transparent 65%); }
+.section { position: relative; }
+.section-heading { gap: 36px; margin-bottom: 48px; }
+.section-heading h2 { text-wrap: balance; }
+.section-supporting { margin-top: 19px; max-width: 560px; color: #5d7190; font-size: 15px; line-height: 1.8; }
+.section .eyebrow { letter-spacing: .21em; }
+.section-heading .text-link { margin-bottom: 7px; }
+.philosophy-grid h2 { color: #17345d; }
+.philosophy-grid > .reveal { border-color: #b6ccec66; }
+.principle-number { color: #567aa9; }
+
+/* Shared card treatment, with restrained variation for the dark chapter. */
+.event-card, .resource-card, .pillar-card {
+  border-radius: var(--card-radius);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+}
+.event-card:hover, .resource-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); border-color: #8db1e366; }
+.event-card { background: linear-gradient(155deg, #fff 60%, #f8fbff); }
+.event-body { padding: 28px; }
+.event-visual { margin: 9px 9px 0; border-radius: 14px; }
+.date-block { border-radius: 10px; box-shadow: 0 5px 16px #09265116; }
+.demo-label { border-radius: 6px; }
+.event-body h3 { line-height: 1.3; }
+.resource-card { background: linear-gradient(145deg, #f8fbff, #eef4ff80); padding: 33px; }
+.resource-icon { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 18px; background: #fff; border: 1px solid #bad0ef55; box-shadow: 0 5px 14px #0b4a9a06; }
+.resource-bottom { padding-top: 20px; border-top: 1px solid var(--card-border); }
+.pillars { background: radial-gradient(ellipse at 80% 10%, #1a438347, transparent 60%), #071b3d; }
+.pillar-card { background: linear-gradient(145deg, #25477855, #10264a77); border-color: #9abcee26; padding: 34px; box-shadow: 0 12px 30px #020e211c; }
+.pillar-card:hover { transform: translateY(-4px); border-color: #87b2ec66; box-shadow: 0 20px 35px #020e2133; }
+.pillar-line { background: linear-gradient(90deg, #d7a84b, #d7a84b22); width: 52px; }
+.values-grid { gap: 23px; }
+.values-grid > .reveal { padding: 30px 25px; background: linear-gradient(155deg, #fff, #eef4ff66); border: 1px solid var(--card-border); border-radius: var(--card-radius); box-shadow: var(--card-shadow); }
+.value-icon { border-radius: 15px; border: 1px solid #bdd4f166; background: #e7f0ff; }
+.values-grid h3 { font-size: 20px; line-height: 1.35; }
+.values-grid p { font-size: 14px; }
+.visual-legacy, .community-art > .visual { border-radius: var(--card-radius); box-shadow: 0 18px 48px #12396412; }
+.legacy-label { border-radius: 0 16px 16px 0; background: #fffffff5; backdrop-filter: blur(12px); }
+.community-caption { border-radius: 15px 0 15px 15px; box-shadow: 0 12px 26px #0755c91c; background: linear-gradient(115deg, #074fac, #1767d6); }
+.tags span { background: #ffffff99; border-color: #bed2ec88; }
+.gallery-button { border-radius: 18px; border: 1px solid #adc8e34d; box-shadow: var(--card-shadow); }
+.gallery-button:hover { box-shadow: var(--card-shadow-hover); }
+.gallery-hover { background: linear-gradient(transparent 25%, #103b77b8); }
+.gallery-button:hover .visual { transform: scale(1.025); }
+
+/* Portrait lighting stays behind the artwork and away from the text. */
+.hero-with-portrait { background: radial-gradient(ellipse at 83% 52%, #164f9c66, transparent 50%), linear-gradient(115deg, #06172f, #0b2c64 64%, #123f86); }
+.hero-with-portrait .hero-art:before { inset: 5% -12% 4%; background: radial-gradient(ellipse at 53% 42%, #649deb48, #3676ce18 45%, transparent 70%); }
+.hero-with-portrait .portrait-orbits { border-color: #9bc6ff25; box-shadow: 0 0 80px #458dea08, inset 0 0 55px #458dea08; }
+.hero-with-portrait .portrait-orbits:before { border-color: #b4d4ff1c; }
+.hero-with-portrait .visual-hero img { filter: drop-shadow(-18px 12px 45px #020b2538); }
+.hero-with-portrait .hero-art-caption { border-radius: 0 13px 13px 0; background: #082048b5; box-shadow: 0 12px 25px #02132a15; }
+.button { border-radius: 9px; }
+.hero .button-white { box-shadow: 0 8px 24px #010f2b20; }
+
+/* The invitation closes the page with a richer, spacious blue composition. */
+.cta { padding: 120px 0 130px; background: radial-gradient(ellipse at 72% 36%, #478bf448, transparent 56%), linear-gradient(115deg, #072b6a 0%, #0752bb 58%, #143f8d 100%); }
+.cta-content { padding-left: 34px; border-left: 1px solid #a9cfff42; }
+.cta h2 { font-size: clamp(3.3rem, 5.8vw, 5.2rem); }
+.cta-content > p:not(.eyebrow) { font-size: 16px; margin-top: 28px; }
+.cta-buttons { margin-top: 36px; gap: 17px; }
+.cta-buttons .button { min-height: 58px; padding: 17px 28px; }
+.cta .button-white { box-shadow: 0 12px 28px #03296333; }
+.cta .button-white:hover { box-shadow: 0 16px 36px #03296355; transform: translateY(-2px); }
+.cta .button-outline { background: #ffffff06; border-color: #c1dcff70; }
+.cta-circle { border-color: #c3ddff26; width: 820px; height: 820px; top: -170px; right: -90px; }
+.cta-bg-text { color: #ffffff06; bottom: -30px; }
+.footer-contact { padding: 24px 0 28px; border-top: 1px solid #ffffff12; scroll-margin-top: 110px; }
+.footer-contact:focus { outline: 2px solid #88b9ff; outline-offset: 8px; }
+.footer-contact .eyebrow { font-size: 10px; margin-bottom: 10px; }
+.footer-contact p { color: #c3d2e9; font-size: 14px; }
+.footer-preview-note { display: block; margin-top: 10px; font-size: 12px; color: #97aac7; }
+#event-list, #resource-list { scroll-margin-top: 115px; }
+.link-unavailable { cursor: default; }
+.link-unavailable.text-link::after { display: none; }
+.link-unavailable:not(.gallery-button):hover svg { transform: none; }
+.event-action.link-unavailable, .resource-bottom { color: #5d7190; }
+.event-action.link-unavailable > svg, .resource-card.link-unavailable .resource-bottom > svg, .gallery-button.link-unavailable .gallery-hover > svg { display: none; }
+.language.link-unavailable { opacity: .6; }
+.social-link.link-unavailable:hover { background: transparent; }
+.footer-link.link-unavailable:hover { color: #93a3bd; }
+
+@media (max-width: 1199px) {
+  .values-grid { gap: 17px; }
+  .values-grid > .reveal { padding: 25px 20px; }
+  .event-body { padding: 22px; }
+  .resource-card, .pillar-card { padding: 27px; }
+  .gallery { padding-top: 85px; }
+  .values { padding-bottom: 85px; }
+}
+@media (max-width: 700px) {
+  .section-heading { margin-bottom: 30px; }
+  .section-supporting { font-size: 14px; margin-top: 16px; }
+  .gallery { padding-top: 65px; }
+  .values { padding-bottom: 65px; }
+  .values-grid { grid-template-columns: 1fr; gap: 16px; }
+  .values-grid > .reveal { padding: 25px; }
+  .values-grid p { font-size: 14px; }
+  .event-body { padding: 25px; }
+  .resource-card, .pillar-card { padding: 28px; }
+  .gallery-button { border-radius: 14px; }
+  .gallery-hover { font-size: 11px; line-height: 1.5; }
+  .cta { padding: 80px 0 90px; }
+  .cta-content { padding-left: 18px; }
+  .cta h2 { font-size: clamp(2.7rem, 12vw, 3.8rem); }
+  .cta-content > p:not(.eyebrow) { font-size: 14px; }
+  .cta-buttons { flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .cta-buttons .button { min-height: 52px; padding: 14px 18px; font-size: 13px; }
+  .cta-circle { width: 540px; height: 540px; right: -310px; top: -90px; }
+  .cta-bg-text { bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .event-card:hover, .resource-card:hover, .pillar-card:hover, .cta .button-white:hover { transform: none; }
+}
